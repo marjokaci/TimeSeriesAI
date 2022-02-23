@@ -324,8 +324,8 @@ class FinnhubDB:
 if __name__ == "__main__":
     mytest = Finnhub(api_key="c0d9tiv48v6vf7f7iorg")
     db = FinnhubDB('./dati/finnhub.db')
-    #print('Storing data in sqlite database...\n(it will taker around 4min due to API limited nr of calls per min.)')
+    print('Storing data in sqlite database...\n(it will taker around 4min due to API limited nr of calls per min.)')
     # Currently support stock market GSPC (S&P 500), NDX (Nasdaq 100), DJI (Dow Jones)
-    mytest.store_data(db, stockmarket='NDX', from_date="10/01/2015", to_date="10/01/2021",
+    mytest.store_data(db, stockmarket='NDX', from_date="10/01/2020", to_date="10/01/2021",
                       fxcurr=['AUD/USD', 'EUR/USD', 'GBP/USD'])
     print('All necessary data have been stored in DB.')
